@@ -1,0 +1,25 @@
+function check(event,value){
+	  
+    if ((event.which != 46 || $(this).val().indexOf('.') != -1)&&(event.which < 48 || event.which > 57) && event.keyCode !=8 ) {
+        
+   		if(($(this).val().indexOf('.') != -1)){
+      	
+      }
+      event.preventDefault();
+	  return false;
+   }
+   if(value.indexOf(".")>-1 && (value.split('.')[1].length > 1)&& event.keyCode !=8){
+				event.preventDefault();
+				return false;
+			}
+	 
+		  if(value.length > 5){
+			  value = value + event.key;
+		   if(!(value.indexOf(".")>-1)){	
+				event.preventDefault();
+				return false;
+			}
+			
+			}
+			
+}
